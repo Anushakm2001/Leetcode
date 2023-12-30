@@ -1,0 +1,14 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        # Initialize an empty string to store alphanumeric characters
+        string = ''
+        
+        # Iterate through each character in the input string
+        for i in s:
+            # Check if the character is alphanumeric
+            if i.isalnum() == True:
+                # If alphanumeric, convert to lowercase and append to the 'string'
+                string += i.lower()
+        
+        # Check if the modified string is a palindrome
+        return string == string[::-1]
