@@ -1,0 +1,19 @@
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+        dicts={}
+        paragraph=paragraph.lower()
+        symbol="!?'.,;"       
+        for i in symbol:
+            paragraph=paragraph.replace(i," ")
+        paragraph=paragraph.split()
+        for i in paragraph:
+            if i not in banned:
+                if i not in dicts:
+                    dicts[i]=1
+                else:
+                    dicts[i]+=1
+        for i in dicts:
+            if dicts[i]==max(dicts.values()):
+                return i                                  
+
+        
