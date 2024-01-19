@@ -1,0 +1,22 @@
+class Solution(object):
+    def splitWordsBySeparator(self, words, separator):
+        # Create a list to store the split words.
+        arr = []
+
+        # Convert the separator character to a string.
+        p = str(separator)
+
+        # Loop through each word in the input list.
+        for word in words:
+            # Split the word into an array of substrings using the separator.
+            a = word.split(p)
+        
+            # Loop through the array of split words.
+            for splitWord in a:
+                # Check if the split word is not empty.
+                if splitWord:
+                    # Add the non-empty split word to the list.
+                    arr.append(splitWord)
+    
+        # Return the list containing all the split words.
+        return arr
